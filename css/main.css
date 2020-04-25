@@ -95,45 +95,85 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 html {
-  background-color: #000;
+  background-color: #fff;
   height: 100%;
+  width: 100%
 }
 
 body {
-  font-family: 'Mada', sans-serif;
-  padding: 2em;
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.25em;
+  padding: 1em 2em;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.wrapper {
+header,
+main,
+footer {
+    display: flex;
+    width: 100%;
+}
+
+header,
+footer {
+    height: 80px;
+    justify-content: flex-start;
+}
+
+header {
+    font-family: 'Merriweather', serif;
+    font-size: 3.5em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    height: 200px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #222;
+}
+
+main span {
+    font-family: 'Merriweather', serif;
+}
+
+.flex-container {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
+  align-items: center;
+  justify-content: center;
   justify-content: space-between;
-  font-weight: 700;
-  border-top: solid 2px #eb2dab;
-  border-bottom: solid 2px #eb2dab;
+  flex-flow: row wrap;
 }
 
-.div-1, .div-2, .div-3 {
+.flex-items {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   width: 32%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
   line-height: 1.5em;
   font-size: 1em;
-  background-color: #000;
   height: 300px;
-  padding: 20px;
+  padding: 10px 0px;
   box-sizing: border-box;
 }
 
-.div-2 {
+#div-1,
+#div-2 {
+    border-right: .5px solid #222;
+    padding-right: 30px;
+}
 
+footer {
+    font-weight: 300;
+    border-top: 1px solid #222;
 }
 
 
@@ -216,6 +256,7 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
